@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="64" id="KGk-i7-Jjw" customClass="MessageCell" customModule="FlashChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wpo-te-u31">
+                        <rect key="frame" x="10" y="10" width="300" height="44"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSi-ba-A0s">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gei-5f-afL">
+                                        <rect key="frame" x="10" y="10" width="220" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="MessageBubbleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gei-5f-afL" secondAttribute="trailing" constant="10" id="VMj-rU-WiH"/>
+                                    <constraint firstItem="Gei-5f-afL" firstAttribute="top" secondItem="kSi-ba-A0s" secondAttribute="top" constant="10" id="Vw2-T5-l81"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gei-5f-afL" secondAttribute="bottom" constant="10" id="adN-y1-S2l"/>
+                                    <constraint firstItem="Gei-5f-afL" firstAttribute="leading" secondItem="kSi-ba-A0s" secondAttribute="leading" constant="10" id="mPK-JM-Vwd"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-YM-ee8">
+                                <rect key="frame" x="260" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IOP-Mj-DPY"/>
+                                    <constraint firstAttribute="width" constant="40" id="eQu-hU-K8J"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wpo-te-u31" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="NpW-cL-AB2"/>
+                    <constraint firstAttribute="trailing" secondItem="Wpo-te-u31" secondAttribute="trailing" constant="10" id="Pet-PX-RPI"/>
+                    <constraint firstAttribute="bottom" secondItem="Wpo-te-u31" secondAttribute="bottom" constant="10" id="Won-yv-oUT"/>
+                    <constraint firstItem="Wpo-te-u31" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="hcY-Cd-Hdt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageAvater" destination="6iP-YM-ee8" id="bpv-b8-Kcq"/>
+                <outlet property="label" destination="Gei-5f-afL" id="Yhd-Tb-Yqx"/>
+                <outlet property="messageBubble" destination="kSi-ba-A0s" id="o9r-Eu-EN6"/>
+            </connections>
+            <point key="canvasLocation" x="63.768115942028992" y="78.348214285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MeAvatar" width="36" height="36"/>
+        <namedColor name="MessageBubbleColor">
+            <color red="0.20392156862745098" green="0.90588235294117647" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

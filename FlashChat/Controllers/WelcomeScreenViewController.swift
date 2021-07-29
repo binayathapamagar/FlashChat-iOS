@@ -15,7 +15,7 @@ class WelcomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = "⚡️FLASH CHAT"
+        titleLabel.text = K.appName
         
     }
 
