@@ -12,12 +12,9 @@ class ChatViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
+    let db = Firestore.firestore()
     
-    var messages = [
-        Message(sender: "johndoe@gmail.com", body: "Hey!"),
-        Message(sender: "maryJane@gmail.com", body: "Hi!"),
-        Message(sender: "johndoe@gmail.com", body: "Wanna Netflix and chill?")
-    ]
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +25,29 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         
+        loadMessages()
+        
     }
     
     //MARK: - IBAction methods
 
     @IBAction func sendButtonPressed(_ sender: UIButton) {
+        
+        if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
+            
+            db.collection("messages")
+                .addDocument(data: [
+                                K.FStore.senderField : messageSender,
+                                K.FStore.bodyField: messageBody,
+                                K.FStore.dateField: Date().timeIntervalSince1970
+                ]) { error in
+                if let e = error {
+                    print("There was an error adding data to the database: \(e)")
+                }
+            }
+            
+        }
+                
     }
     
     @IBAction func logoutBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -49,17 +64,48 @@ class ChatViewController: UIViewController {
         }
         
     }
+
+    //MARK: - Instance Methods
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func loadMessages() {
+        
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { querySnapshot, error in
+            
+            self.messages = []
+            
+            if let e = error {
+                print("Error retrieving the data from the database: \(e)")
+            }else {
+                
+                if let snapshotDocuments = querySnapshot?.documents {
+                    
+                    for document in snapshotDocuments {
+                        
+                        let data = document.data()
+                        if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
+                            
+                            let message = Message(sender: messageSender, body: messageBody)
+                            self.messages.append(message)
+                            
+                            DispatchQueue.main.async {
+                                
+                                self.tableView.reloadData()
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
     }
-    */
-
+    
 }
 
 //MARK: - Extensions
