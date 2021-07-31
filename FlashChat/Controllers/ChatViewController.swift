@@ -39,22 +39,31 @@ class ChatViewController: UIViewController {
 
     @IBAction func sendButtonPressed(_ sender: UIButton) {
                 
-        if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
+        if messageTextField.text != "" {
             
-            db.collection("messages")
-                .addDocument(data: [
-                                K.FStore.senderField : messageSender,
-                                K.FStore.bodyField: messageBody,
-                                K.FStore.dateField: Date().timeIntervalSince1970
-                ]) { error in
-                if let e = error {
-                    print("There was an error adding data to the database: \(e)")
-                }else {
-                    DispatchQueue.main.async {
-                        self.messageTextField.text?.removeAll()
+            if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
+                
+                db.collection("messages")
+                    .addDocument(data: [
+                                    K.FStore.senderField : messageSender,
+                                    K.FStore.bodyField: messageBody,
+                                    K.FStore.dateField: Date().timeIntervalSince1970
+                    ]) { error in
+                    if let e = error {
+                        print("There was an error adding data to the database: \(e)")
+                    }else {
+                        DispatchQueue.main.async {
+                            self.messageTextField.text?.removeAll()
+                            self.messageTextField.placeholder?.removeAll()
+                        }
                     }
                 }
+                
             }
+            
+        }else {
+            
+            messageTextField.placeholder = "Please type something before hitting send."
             
         }
                         
