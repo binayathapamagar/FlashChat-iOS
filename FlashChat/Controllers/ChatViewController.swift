@@ -16,6 +16,13 @@ class ChatViewController: UIViewController {
     
     var messages: [Message] = []
     
+    override func viewWillAppear(_ animated: Bool) {
+            
+        navigationController?.navigationBar.barTintColor = UIColor(named: K.BrandColors.jadeDust)
+        navigationController?.navigationBar.tintColor = .white
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 

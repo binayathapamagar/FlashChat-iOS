@@ -18,6 +18,13 @@ class LoginViewController: UIViewController {
     
     //MARK: - Lifecycle methods
     
+    override func viewWillAppear(_ animated: Bool) {
+            
+        navigationController?.navigationBar.barTintColor = UIColor(named: K.BrandColors.blue)
+        navigationController?.navigationBar.tintColor = .white
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

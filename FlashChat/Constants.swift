@@ -18,7 +18,7 @@ struct K {
         static let senderBubbleColor = "Sender"
         static let lightPurple = "BrandLightPurple"
         static let blue = "BrandBlue"
-        static let lighBlue = "BrandLightBlue"
+        static let lightBlue = "BrandLightBlue"
     }
     
     struct FStore {

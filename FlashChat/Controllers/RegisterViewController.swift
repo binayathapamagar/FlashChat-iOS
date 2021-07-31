@@ -16,6 +16,13 @@ class RegisterViewController: UIViewController {
     var spinner = JHSpinnerView()
     
     //MARK: - Lifecycle methods
+    
+    override func viewWillAppear(_ animated: Bool) {
+            
+        navigationController?.navigationBar.barTintColor = UIColor(named: K.BrandColors.lightBlue)
+        navigationController?.navigationBar.tintColor = .black
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
