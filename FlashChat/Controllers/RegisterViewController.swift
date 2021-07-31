@@ -16,11 +16,9 @@ class RegisterViewController: UIViewController {
     var spinner = JHSpinnerView()
     
     //MARK: - Lifecycle methods
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
        
     override func viewDidDisappear(_ animated: Bool) {

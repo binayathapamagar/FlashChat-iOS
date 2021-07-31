@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FLASH CHAT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfr-M9-EGH" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="214" y="463" width="0.0" height="0.0"/>
+                                <rect key="frame" x="214" y="419" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                 <color key="textColor" name="BrandBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFk-R5-pCi">
-                                <rect key="frame" x="20" y="762" width="388" height="60"/>
+                                <rect key="frame" x="20" y="674" width="388" height="60"/>
                                 <color key="backgroundColor" name="BrandLightBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="dpj-8o-iQM"/>
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pi-cG-M81">
-                                <rect key="frame" x="20" y="832" width="388" height="60"/>
+                                <rect key="frame" x="20" y="744" width="388" height="60"/>
                                 <color key="backgroundColor" name="BrandBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="wN6-Jl-u8O"/>
@@ -83,13 +83,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create An Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JR2-uH-IhI" userLabel="Title">
-                                <rect key="frame" x="82" y="108" width="264" height="36"/>
+                                <rect key="frame" x="82" y="20" width="264" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" name="BrandBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-9E-L8e" userLabel="EmailView">
-                                <rect key="frame" x="0.0" y="144" width="428" height="177"/>
+                                <rect key="frame" x="0.0" y="56" width="428" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="riJ-pb-pRi">
                                         <rect key="frame" x="0.0" y="20" width="428" height="137"/>
@@ -113,7 +113,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtD-6o-CFv" userLabel="PasswordView">
-                                <rect key="frame" x="0.0" y="221" width="428" height="177"/>
+                                <rect key="frame" x="0.0" y="133" width="428" height="177"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2E-d1-hPB">
                                         <rect key="frame" x="0.0" y="126" width="428" height="51"/>
@@ -184,13 +184,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Messaging" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tn5-Ee-5ob">
-                                <rect key="frame" x="0.0" y="108" width="428" height="36"/>
+                                <rect key="frame" x="0.0" y="20" width="428" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" name="BrandLightBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAU-3f-bDg" userLabel="EmailView">
-                                <rect key="frame" x="0.0" y="144" width="428" height="177"/>
+                                <rect key="frame" x="0.0" y="56" width="428" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="hqh-UP-g9U">
                                         <rect key="frame" x="0.0" y="20" width="428" height="137"/>
@@ -214,7 +214,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-Cf-RlH" userLabel="PasswordView">
-                                <rect key="frame" x="0.0" y="221" width="428" height="177"/>
+                                <rect key="frame" x="0.0" y="133" width="428" height="177"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cB6-MM-KsQ">
                                         <rect key="frame" x="0.0" y="126" width="428" height="51"/>
@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="1614.9532710280373" y="582.50539956803459"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--⚡️FLASH CHAT-->
         <scene sceneID="dqU-5f-m3y">
             <objects>
                 <viewController id="auf-f9-1ER" customClass="ChatViewController" customModule="FlashChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -286,11 +286,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eAZ-VQ-Xyx">
-                                <rect key="frame" x="0.0" y="88" width="428" height="744"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGP-Ka-Xxz" userLabel="TextView">
-                                <rect key="frame" x="0.0" y="832" width="428" height="60"/>
+                                <rect key="frame" x="0.0" y="744" width="428" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MbM-rN-KpG">
                                         <rect key="frame" x="20" y="20" width="328" height="40"/>
@@ -335,7 +335,7 @@
                             <constraint firstItem="CGP-Ka-Xxz" firstAttribute="top" secondItem="eAZ-VQ-Xyx" secondAttribute="bottom" id="paR-H8-jt9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OTX-oS-oDl">
+                    <navigationItem key="navigationItem" title="⚡️FLASH CHAT" id="OTX-oS-oDl">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="6V9-ep-xCx">
                             <connections>
                                 <action selector="logoutBarButtonPressed:" destination="auf-f9-1ER" id="Ljb-q5-bbr"/>
@@ -356,9 +356,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="auk-HG-V55" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r3k-TU-K7L">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="r3k-TU-K7L">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="BrandBlue"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

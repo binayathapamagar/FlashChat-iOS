@@ -18,8 +18,7 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = K.appName
+                
         navigationItem.hidesBackButton = true
         
         tableView.dataSource = self
@@ -32,7 +31,7 @@ class ChatViewController: UIViewController {
     //MARK: - IBAction methods
 
     @IBAction func sendButtonPressed(_ sender: UIButton) {
-        
+                
         if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
             
             db.collection("messages")
@@ -43,11 +42,15 @@ class ChatViewController: UIViewController {
                 ]) { error in
                 if let e = error {
                     print("There was an error adding data to the database: \(e)")
+                }else {
+                    DispatchQueue.main.async {
+                        self.messageTextField.text?.removeAll()
+                    }
                 }
             }
             
         }
-                
+                        
     }
     
     @IBAction func logoutBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -92,6 +95,8 @@ class ChatViewController: UIViewController {
                             DispatchQueue.main.async {
                                 
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                                 
                             }
                             
@@ -118,12 +123,28 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let message = messages[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        cell.label.text = messages[indexPath.row].body
+        cell.label.text = message.body
+        
+        if message.sender == Auth.auth().currentUser?.email {
+            
+            cell.leftAvaterImage.isHidden = true
+            cell.rightAvaterImage.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.senderBubbleColor)
+            cell.label.textColor = .white
+            
+        }else {
+            
+            cell.leftAvaterImage.isHidden = false
+            cell.rightAvaterImage.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.jadeDust)
+            cell.label.textColor = .black
+            
+        }
         
         return cell
         
     }
     
 }
-

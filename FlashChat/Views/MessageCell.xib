@@ -20,11 +20,18 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wpo-te-u31">
                         <rect key="frame" x="10" y="10" width="300" height="44"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-YM-ee8" userLabel="RecipentAvater">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IOP-Mj-DPY"/>
+                                    <constraint firstAttribute="width" constant="40" id="eQu-hU-K8J"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSi-ba-A0s">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                <rect key="frame" x="60" y="0.0" width="180" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gei-5f-afL">
-                                        <rect key="frame" x="10" y="10" width="220" height="24"/>
+                                        <rect key="frame" x="10" y="10" width="160" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -38,11 +45,11 @@
                                     <constraint firstItem="Gei-5f-afL" firstAttribute="leading" secondItem="kSi-ba-A0s" secondAttribute="leading" constant="10" id="mPK-JM-Vwd"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-YM-ee8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="2wD-Ep-Hqr">
                                 <rect key="frame" x="260" y="0.0" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="IOP-Mj-DPY"/>
-                                    <constraint firstAttribute="width" constant="40" id="eQu-hU-K8J"/>
+                                    <constraint firstAttribute="height" constant="40" id="7oa-Pv-nCZ"/>
+                                    <constraint firstAttribute="width" constant="40" id="sxe-64-BVf"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -57,15 +64,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imageAvater" destination="6iP-YM-ee8" id="bpv-b8-Kcq"/>
                 <outlet property="label" destination="Gei-5f-afL" id="Yhd-Tb-Yqx"/>
+                <outlet property="leftAvaterImage" destination="6iP-YM-ee8" id="Ng6-6B-yx7"/>
                 <outlet property="messageBubble" destination="kSi-ba-A0s" id="o9r-Eu-EN6"/>
+                <outlet property="rightAvaterImage" destination="2wD-Ep-Hqr" id="rW7-yE-ySX"/>
             </connections>
             <point key="canvasLocation" x="63.768115942028992" y="78.348214285714278"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="MeAvatar" width="36" height="36"/>
+        <image name="YouAvatar" width="36" height="36"/>
         <namedColor name="MessageBubbleColor">
             <color red="0.20399999618530273" green="0.90600001811981201" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

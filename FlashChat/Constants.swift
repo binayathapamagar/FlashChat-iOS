@@ -15,6 +15,7 @@ struct K {
     
     struct BrandColors {
         static let jadeDust = "JadeDust"
+        static let senderBubbleColor = "Sender"
         static let lightPurple = "BrandLightPurple"
         static let blue = "BrandBlue"
         static let lighBlue = "BrandLightBlue"
